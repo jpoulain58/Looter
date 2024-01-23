@@ -16,3 +16,6 @@
 ##exercice 2
 ##### Le code declenche automatiquement des mises à jour de l’interface utilisateur lorque les propriétés de l'objet changent donc ça fonctionne bien
 ##### @StateObject est utilisé pour les nouveaux objets observables que la vue possède alors que @ObservedObject est utilisé pour les objets observables que la vue n'a pas créé mais simplement reçu. State n'est pas adapté aux objets
+
+#Page 7
+##### Si on n'attends pas avant de lancer l'animation c'est toute la vue qui s'anime ou du moins n'a pas un comportement normal
