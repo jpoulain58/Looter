@@ -9,26 +9,12 @@ import SwiftUI
 
 struct LootDetailView: View {
     var item: LootItem
-    
+    @State private var isAnimated = false
+    @State private var isTriggered = false
+    @State private var dropIcon = 0.0
     var body: some View {
         Section{
-            VStack{
-                Text(item.type.rawValue)
-                    .padding()
-                    .background(item.rarity.colorForRarity())
-                    .cornerRadius(30)
-                    .frame(height: 150, alignment: .bottom)
-                    .font(.system(size: 80))
-                    .shadow(color: item.rarity.colorForRarity(), radius: 100)
-
-                Text(item.name).foregroundColor(item.rarity.colorForRarity())
-                    .padding(10)
-                    .frame(height: 150, alignment: .top)
-                    .font(.system(size: 20))
-                    .fontWeight(.black)
-
-
-            }
+            AnimationsRow(item: item)
         }
         if item.rarity == Rarity.unique{
             Text("Item Unique 🏆")
@@ -37,6 +23,8 @@ struct LootDetailView: View {
                 .padding(.vertical, 10)
                 .background(item.rarity.colorForRarity())
                 .cornerRadius(10)
+                .shadow(color: item.rarity.colorForRarity(), radius: isAnimated ? 50 : 0 )
+                .animation(.bouncy .delay(1) ,value: isAnimated)
         }
         else {
             Text("")
@@ -44,21 +32,7 @@ struct LootDetailView: View {
 
         }
             List{
-                Section(header: Text("Informations")) {
-                    HStack{
-                            if let coverName = item.game.coverName, let image = UIImage(named: coverName) {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50)
-                            }
-                            Text(item.game.name)
-                        }
-                    Text("In game : \(item.name)")
-                    Text("Puissance (ATQ) : \(item.attackStrength ?? 0)")
-                    Text("Possédé(s) : \(item.quantity)")
-                    Text("Rareté : \(String(describing: item.rarity))")
-                }
+                DetailsItemRow(item: item)
                 
                 
                 
@@ -71,3 +45,5 @@ struct LootDetailView: View {
 #Preview {
     LootDetailView(item: testLootItems[0])
 }
+
+

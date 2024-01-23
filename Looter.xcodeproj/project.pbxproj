@@ -15,6 +15,9 @@
 		006C9ADF2B5A8CBD0034296C /* LootItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C9ADE2B5A8CBD0034296C /* LootItem.swift */; };
 		006C9AE12B5A980C0034296C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C9AE02B5A980C0034296C /* Game.swift */; };
 		006C9AEE2B5ABC0A0034296C /* LootDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C9AED2B5ABC0A0034296C /* LootDetailView.swift */; };
+		00ACA9792B5FCCF7009A5B55 /* LootRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ACA9782B5FCCF7009A5B55 /* LootRow.swift */; };
+		00ACA97B2B5FD053009A5B55 /* AnimationsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ACA97A2B5FD053009A5B55 /* AnimationsRow.swift */; };
+		00ACA97D2B5FD19E009A5B55 /* DetailsItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ACA97C2B5FD19E009A5B55 /* DetailsItemRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		006C9ADE2B5A8CBD0034296C /* LootItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootItem.swift; sourceTree = "<group>"; };
 		006C9AE02B5A980C0034296C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		006C9AED2B5ABC0A0034296C /* LootDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootDetailView.swift; sourceTree = "<group>"; };
+		00ACA9782B5FCCF7009A5B55 /* LootRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootRow.swift; sourceTree = "<group>"; };
+		00ACA97A2B5FD053009A5B55 /* AnimationsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsRow.swift; sourceTree = "<group>"; };
+		00ACA97C2B5FD19E009A5B55 /* DetailsItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsItemRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +65,11 @@
 		006C9ACD2B5A78F50034296C /* Looter */ = {
 			isa = PBXGroup;
 			children = (
+				00ACA97C2B5FD19E009A5B55 /* DetailsItemRow.swift */,
+				00ACA97A2B5FD053009A5B55 /* AnimationsRow.swift */,
 				006C9ACE2B5A78F50034296C /* LooterApp.swift */,
 				006C9AD02B5A78F50034296C /* ContentView.swift */,
+				00ACA9782B5FCCF7009A5B55 /* LootRow.swift */,
 				006C9AED2B5ABC0A0034296C /* LootDetailView.swift */,
 				006C9ADC2B5A7DB50034296C /* AddItemView.swift */,
 				006C9ADE2B5A8CBD0034296C /* LootItem.swift */,
@@ -150,9 +159,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				006C9AD12B5A78F50034296C /* ContentView.swift in Sources */,
+				00ACA97B2B5FD053009A5B55 /* AnimationsRow.swift in Sources */,
+				00ACA9792B5FCCF7009A5B55 /* LootRow.swift in Sources */,
 				006C9AE12B5A980C0034296C /* Game.swift in Sources */,
 				006C9ADD2B5A7DB50034296C /* AddItemView.swift in Sources */,
 				006C9AEE2B5ABC0A0034296C /* LootDetailView.swift in Sources */,
+				00ACA97D2B5FD19E009A5B55 /* DetailsItemRow.swift in Sources */,
 				006C9ADF2B5A8CBD0034296C /* LootItem.swift in Sources */,
 				006C9ACF2B5A78F50034296C /* LooterApp.swift in Sources */,
 			);

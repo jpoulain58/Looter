@@ -29,17 +29,7 @@ struct ContentView: View {
                             NavigationLink {
                                     LootDetailView(item: item) // On passe directement l'item à la vue
                                 } label: {
-                                    VStack(alignment: .leading) {
-                                        HStack{
-                                            Circle()
-                                                .foregroundColor(item.rarity.colorForRarity())
-                                                .frame(width: 10, height: 10)
-                                                .padding(.trailing, 8)
-                                            Text(item.name).font(.headline)
-                                            Spacer()
-                                            Text(item.type.rawValue)
-                                        }
-                                        Text("Quantity: \(item.quantity)")                                }
+                                    LootRow(item: item)
                     }
                 }
             }
