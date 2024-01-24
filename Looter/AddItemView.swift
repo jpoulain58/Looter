@@ -26,13 +26,13 @@ struct AddItemView: View {
 
                 Section {
                     
-                    Picker("Jeu", selection: $selectedGame) {
-                        Text(Game.emptyGame.name).tag(Game.emptyGame)
-                        ForEach(availableGames) { game in
-                            Text(game.name)
-                                .tag(game)
+                        Picker("Jeu", selection: $selectedGame) {
+                            Text(Game.emptyGame.name).tag(Game.emptyGame)
+                            ForEach(availableGames) { game in
+                                Text(game.name)
+                                    .tag(game)
+                            }
                         }
-                    }
                     Stepper("Combien : \(selectedQuantity)",value: $selectedQuantity)
                 }
                 
