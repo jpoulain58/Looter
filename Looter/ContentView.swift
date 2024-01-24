@@ -16,10 +16,15 @@ class Inventory: ObservableObject {
 }
 
 struct ContentView: View {
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
+
     @StateObject var inventory = Inventory()
     @State var showAddItemView = false
-
+    func reset(){
+        isOnboarding = true
+    }
     var body: some View {
+        Button("Reset", action: reset)
         NavigationView {
             List {
                 ForEach(inventory.loot) { item in

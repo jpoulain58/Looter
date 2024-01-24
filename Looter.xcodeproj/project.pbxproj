@@ -18,6 +18,8 @@
 		00ACA9792B5FCCF7009A5B55 /* LootRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ACA9782B5FCCF7009A5B55 /* LootRow.swift */; };
 		00ACA97B2B5FD053009A5B55 /* AnimationsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ACA97A2B5FD053009A5B55 /* AnimationsRow.swift */; };
 		00ACA97D2B5FD19E009A5B55 /* DetailsItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ACA97C2B5FD19E009A5B55 /* DetailsItemRow.swift */; };
+		00ACA9A62B6160BA009A5B55 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ACA9A52B6160BA009A5B55 /* OnboardingView.swift */; };
+		00ACA9A82B6160C6009A5B55 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ACA9A72B6160C6009A5B55 /* OnboardingPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		00ACA9782B5FCCF7009A5B55 /* LootRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootRow.swift; sourceTree = "<group>"; };
 		00ACA97A2B5FD053009A5B55 /* AnimationsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsRow.swift; sourceTree = "<group>"; };
 		00ACA97C2B5FD19E009A5B55 /* DetailsItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsItemRow.swift; sourceTree = "<group>"; };
+		00ACA9A52B6160BA009A5B55 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		00ACA9A72B6160C6009A5B55 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 		006C9ACD2B5A78F50034296C /* Looter */ = {
 			isa = PBXGroup;
 			children = (
+				00ACA9A72B6160C6009A5B55 /* OnboardingPageView.swift */,
+				00ACA9A52B6160BA009A5B55 /* OnboardingView.swift */,
 				00ACA97C2B5FD19E009A5B55 /* DetailsItemRow.swift */,
 				00ACA97A2B5FD053009A5B55 /* AnimationsRow.swift */,
 				006C9ACE2B5A78F50034296C /* LooterApp.swift */,
@@ -161,7 +167,9 @@
 				006C9AD12B5A78F50034296C /* ContentView.swift in Sources */,
 				00ACA97B2B5FD053009A5B55 /* AnimationsRow.swift in Sources */,
 				00ACA9792B5FCCF7009A5B55 /* LootRow.swift in Sources */,
+				00ACA9A62B6160BA009A5B55 /* OnboardingView.swift in Sources */,
 				006C9AE12B5A980C0034296C /* Game.swift in Sources */,
+				00ACA9A82B6160C6009A5B55 /* OnboardingPageView.swift in Sources */,
 				006C9ADD2B5A7DB50034296C /* AddItemView.swift in Sources */,
 				006C9AEE2B5ABC0A0034296C /* LootDetailView.swift in Sources */,
 				00ACA97D2B5FD19E009A5B55 /* DetailsItemRow.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LootDetailView: View {
+
     var item: LootItem
     @State private var isAnimated = false
     @State private var isTriggered = false
