@@ -16,9 +16,9 @@ struct OnboardingView: View {
     
     var body: some View {
         TabView {
-            OnboardingPageView(id:(UUID), title: "Gérer ses jeux", description: "Organisez et gérez votre collection de jeux.", image: "bot")
-            OnboardingPageView(id:(UUID),title: "Gérer ses loots", description: "Créez et personnalisez vos loots dans l'application.", image: "manage")
-            OnboardingPageView(id:(UUID),title: "Ajouter ses loots", description: "Ajoutez et suivez vos loots et récompenses.", image: "loot")
+            OnboardingPageView(id:UUID(), title: "Gérer ses jeux", description: "Organisez et gérez votre collection de jeux.", image: "bot")
+            OnboardingPageView(id:UUID(),title: "Gérer ses loots", description: "Créez et personnalisez vos loots dans l'application.", image: "manage")
+            OnboardingPageView(id:UUID(),title: "Ajouter ses loots", description: "Ajoutez et suivez vos loots et récompenses.", image: "loot")
         }
         .tabViewStyle(PageTabViewStyle())
         Button("Start", action: start)

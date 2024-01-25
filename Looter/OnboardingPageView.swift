@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingPageView: View {
-    var id: (UUID)
+    var id: UUID
     var title: String
     var description: String
     var image: String
@@ -46,7 +46,7 @@ struct OnboardingPageView: View {
 // Preview
 struct OnboardingPageView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingPageView(id:(UUID),title: "Bienvenue", description: "Découvrez notre application", image: "bot")
+        OnboardingPageView(id:UUID(),title: "Bienvenue", description: "Découvrez notre application", image: "bot")
     }
 }
 
