@@ -1,67 +1,53 @@
-//
-//  ContentView.swift
-//  Looter
-//
-//  Created by Jeremy POULAIN on 1/19/24.
-//
-
 import SwiftUI
 
 class Inventory: ObservableObject {
-    @Published var loot : [LootItem] = testLootItems
-    
+    @Published var loot: [LootItem] = testLootItems
+
     func addItem(item: LootItem) {
         loot.append(item)
     }
 }
 
 struct ContentView: View {
+    @State private var selectedFeature: LooterFeature = .loot
+    @StateObject var inventory = Inventory()
     @AppStorage("isOnboarding") var isOnboarding: Bool?
 
-    @StateObject var inventory = Inventory()
-    @State var showAddItemView = false
     func reset(){
         isOnboarding = true
     }
     var body: some View {
-        Button("Reset", action: reset)
-        NavigationView {
-            List {
-                ForEach(inventory.loot) { item in
-                    
-                        // Point de couleur en fonction de la rareté
+        Button(action: reset) {
+            Text("Reset")
+        }
+        TabView(selection: $selectedFeature) {
+            LootView(inventory: inventory)
+                .tabItem {
+                    Label("Loot", systemImage: "bag.fill")
+                }
+                .tag(LooterFeature.loot)
 
-                            NavigationLink {
-                                    LootDetailView(item: item) // On passe directement l'item à la vue
-                                } label: {
-                                    LootRow(item: item)
-                    }
+            WishListView()
+                .tabItem {
+                    Label("Wishlist", systemImage: "heart.fill")
                 }
-            }
-            .sheet(isPresented: $showAddItemView) {
-                AddItemView()
-            }
-            .navigationBarTitle("💼 Inventaire")
-            .toolbar {
-                ToolbarItem(placement: .automatic) {
-                    Button(action: {
-                        showAddItemView.toggle()
-                    }) {
-                        Image(systemName: "plus.circle.fill")
-                    }
+                .tag(LooterFeature.wishList)
+
+            ProfileView()
+                .tabItem {
+                    Label("Profil", systemImage: "person.fill")
                 }
-            }
-        }.environmentObject(inventory)
+                .tag(LooterFeature.profile)
+        }
     }
-
-
-
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+enum LooterFeature {
+    case loot, wishList, profile
 }

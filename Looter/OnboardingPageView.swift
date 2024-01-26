@@ -23,7 +23,8 @@ struct OnboardingPageView: View {
                 .padding()
                 .scaleEffect(appear ? 1 : 0.9)
                 .opacity(appear ? 1 : 0)
-                .animation(.easeOut(duration: 0.8).delay(0.3), value: appear)
+                .animation(.easeInOut(duration: 0.8).delay(0.3), value: appear)
+                .id(image)
             
             Text(title)
                 .font(.title)
@@ -37,9 +38,11 @@ struct OnboardingPageView: View {
                 .transition(.opacity)
                 .animation(.easeInOut(duration: 0.6).delay(0.3), value: appear)
         }
-        .onAppear {
+        .task {
+            try? await Task.sleep(nanoseconds: 400000000)
             self.appear = true
         }
+
     }
 }
 
