@@ -38,7 +38,7 @@ struct AnimationsRow: View {
             
             Text(item.name).foregroundColor(item.rarity.colorForRarity())
                 .padding(10)
-                .frame(height: 150, alignment: .top)
+                .frame(height: 100, alignment: .top)
                 .font(.system(size: 20))
                 .fontWeight(.black)
                 .offset(y: dropIcon)
